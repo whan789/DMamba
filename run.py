@@ -95,8 +95,8 @@ if __name__ == '__main__':
     parser.add_argument('--output_attention', action='store_true', help='whether to output attention in ecoder')
     parser.add_argument('--channel_independence', type=int, default=0,
                         help='1: channel dependence 0: channel independence for FreTS model')
-    parser.add_argument('--patch_len', type=int, default=8, help='patch length')
-    parser.add_argument('--stride', type=int, default=8, help='patch stride')
+    parser.add_argument('--patch_len', type=int, default=12, help='patch length')
+    parser.add_argument('--stride', type=int, default=12, help='patch stride')
     
     # optimization
     parser.add_argument('--num_workers', type=int, default=0, help='data loader num workers')
