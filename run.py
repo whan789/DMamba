@@ -143,23 +143,6 @@ if __name__ == '__main__':
     parser.add_argument('--channel_mixup', action='store_true', help='channel mixup', default=False)
     parser.add_argument('--sigma', type=float, default=1.0)
 
-    # ====================== MTGNN Args ====================== #
-    parser.add_argument('--gcn_true', type=str_to_bool, default=True, help='whether to add graph convolution layer')
-    parser.add_argument('--buildA_true', type=str_to_bool, default=True,help='whether to construct adaptive adjacency matrix')
-    parser.add_argument('--num_nodes',type=int,default=207,help='number of nodes/variables')
-    parser.add_argument('--gcn_depth',type=int,default=3,help='graph convolution depth')
-    parser.add_argument('--device',type=str,default='cuda:0',help='')
-    parser.add_argument('--subgraph_size',type=int,default=20,help='k')
-    parser.add_argument('--node_dim',type=int,default=40,help='dim of nodes')
-    parser.add_argument('--dilation_exponential',type=int,default=1,help='dilation exponential')
-    parser.add_argument('--conv_channels',type=int,default=32,help='convolution channels')
-    parser.add_argument('--residual_channels',type=int,default=32,help='residual channels')
-    parser.add_argument('--skip_channels',type=int,default=64,help='skip channels')
-    parser.add_argument('--end_channels',type=int,default=128,help='end channels')
-    parser.add_argument('--propalpha',type=float,default=0.05,help='prop alpha')
-    parser.add_argument('--tanhalpha',type=float,default=3,help='adj alpha')
-    # ====================================================== #
-
     # loss function
     parser.add_argument('--loss_lambda', type=float, default=0.1, help='similarity loss lambda')
     parser.add_argument('--corr_coef', type=float, default=0.0, help='correlation alignment loss coefficient')
