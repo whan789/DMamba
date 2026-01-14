@@ -150,7 +150,7 @@ if __name__ == '__main__':
     parser.add_argument('--train_epochs', type=int, default=30, help='train epochs')
 
     # pretrain
-    parser.add_argument('--stage', type=str, default='pretrain', help='options: [pretrain, finetune, supervised]')
+    parser.add_argument('--stage', type=str, default='finetune', help='options: [pretrain, finetune, supervised]')
     parser.add_argument('--pretrain_epochs', type=int, default=50, help='pretrain epochs')
     parser.add_argument('--masking_ratio', type=float, default=0.5, help='the ratio of patches masked')
     parser.add_argument('--dec_depth', type=int, default=2, help='number of decoder layers in pretraining')
